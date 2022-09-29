@@ -3,9 +3,9 @@
   <head>
     <title>RailsBlog</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    application, http://fonts.googleapis.com/css?family=Raleway:400,700 %>
-    <%= stylesheet_link_tag    application, media: all, data-turbolinks-track: reload %>
-    <%= javascript_include_tag application, data-turbolinks-track: reload %>
+    <%= stylesheet_link_tag    'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -39,7 +39,7 @@
         <% if user_signed_in? %>
         <div class="buttons">
           <button class="button"><%= link_to "New Post", new_post_path %></button>
-          <button class="button"><%= link_to Log Out, destroy_user_session_path, :method => :delete %></button>
+          <button class="button"><%= link_to 'Log Out', destroy_user_session_path, :method => :delete %></button>
 
         </div>
         <% end %>
